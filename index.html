@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Driving Records</title>
+	<script src="angular.js"></script>
+</head>
+<body>
+	<h1>Driving Records</h1>
+
+	<div>
+		<table border="4" ng-controller="records">
+			<thead>
+				<th>Name</th>
+				<th>SSN</th>
+				<th>Age</th>
+				<th>License Number</th>
+				<th>Points on Record</th>
+				<th>State</th>
+				<tbody>
+					<tr ng-repeat="persons in drivers">
+						<td>{{persons.name}}</td>
+						<td>{{persons.SSN}}</td>
+						<td>{{persons.age}}</td>
+						<td>{{persons.driversLicenseNumber}}</td>
+						<td>{{persons.PointsOnRecord}}</td>
+						<td>{{persons.state}}</td>
+					</tr>
+				</tbody>
+			</thead>
+		</table>
+	</div>
+</body>
+	<script src="app.module.js"></script>
+	<script src="driversRecords/recordsCtrl.js"></script>
+</html>
